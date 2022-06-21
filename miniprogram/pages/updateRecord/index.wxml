@@ -1,0 +1,24 @@
+<view>
+  <view class="top_tip">可更新表中的日期</view>
+  <view class="box_text" wx:if="{{!record}}">数据将展示在这里</view>
+  <view  wx:if="{{record}}" class="code_box">
+    <view class="code_box_title">小智的观测记录</view>
+    <view class="code_box_record">
+      <view class="code_box_record_title">日期</view>
+      <view class="code_box_record_title">所在地</view>
+      <view class="code_box_record_title">温度</view>
+      <view class="code_box_record_title">空气质量</view>
+    </view>
+    <view class="line"></view>
+    <view class="code_box_record" wx:for="{{record}}" wx:key="_id">
+      <view class="code_box_record_detail">{{item.xiaozhi}}</view>
+      <view class="code_box_record_detail">{{item.city}}</view>
+      <view class="code_box_record_detail">{{item.temperature}}</view>
+      <view class="code_box_record_detail">{{item.air}}
+    </view>
+  </view>
+  </view>
+  <view class="button" bindtap="updateRecord">修改数据</view>
+  <view class="tip">云数据库</view>
+  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
+</view>

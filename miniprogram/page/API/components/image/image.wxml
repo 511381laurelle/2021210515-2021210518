@@ -1,0 +1,55 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container page" data-weui-theme="{{theme}}">
+  <template is="head" data="{{title: 'choose/previewImage'}}"/>
+
+  <view class="page-body">
+    <form>
+      <view class="page-section">
+
+        <view class="weui-cells weui-cells_after-title">
+
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">图片质量</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker range="{{sizeType}}" bindchange="sizeTypeChange" value="{{sizeTypeIndex}}" mode="selector">
+                <view class="weui-input">{{sizeType[sizeTypeIndex]}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-cells">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                <view class="weui-uploader__hd">
+                  <view class="weui-uploader__title">点击可预览小智的拍摄页面</view>
+                    <view class="weui-uploader__tips">若需上传至云端，请先前往小智数据库建立数据库</view>
+                </view>
+                <view class="weui-uploader__bd">
+                  <view class="weui-uploader__files">
+                    <block wx:for="{{imageList}}" wx:for-item="image">
+                      <view class="weui-uploader__file">
+                        <image class="weui-uploader__img" mode="aspectFill" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                      </view>
+                    </block>
+                  </view>
+                  <view class="weui-uploader__input-box">
+                    <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </form>
+  </view>
+  <view class="button_clear" bindtap="clearImgSrc" wx:if="{{haveGetImgSrc}}">已成功上传云端，点击清空预览</view>
+  <template is="foot" />
+</view>

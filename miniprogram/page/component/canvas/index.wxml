@@ -1,0 +1,11 @@
+<canvas
+  type="2d"
+  id="canvas"
+  style="width: 300px; height: 300px;"
+></canvas>
+<button class="button-sp-area" type="primary" plain="true" bindtap="upp">↑</button>
+<view class="button-sp-area">
+<button class="mini-btn" type="primary" plain="true" size="mini" bindtap="left">←</button>
+<button class="mini-btn" type="primary" plain="true" size="mini" bindtap="right">→</button>
+<button type="primary" plain="true" size="default" bindtap="down">↓</button>
+</view>

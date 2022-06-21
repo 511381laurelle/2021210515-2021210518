@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "page/component/index",
+    "page/component/canvas/index",
+    "page/component/map/map",
+    "page/API/index",
+    "page/API/components/get-battery-info/get-battery-info",
+    "page/API/components/bluetooth/slave/slave",
+    "page/API/components/bluetooth/bluetooth",
+    "page/API/components/web-socket/web-socket",
+    "page/API/components/video/video",
+    "page/API/components/request/request",
+    "page/API/components/open-location/open-location",
+    "page/API/components/get-location/get-location",
+    "page/API/components/download-file/download-file",
+    "page/API/components/choose-location/choose-location",
+    "page/API/components/image/image",
+    "page/cloud/index",
+    "components/cloudTipModal/index",
+    "pages/selectRecord/index",
+    "pages/updateRecord/index",
+    "pages/updateRecordResult/index",
+    "pages/updateRecordSuccess/index",
+    "pages/uploadFile/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "旅行的小智",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "@tabBarColor",
+    "selectedColor": "@tabBarSelectedColor",
+    "borderStyle": "@tabBarBorderStyle",
+    "backgroundColor": "@tabBarBackgroundColor",
+    "list": [
+      {
+        "pagePath": "page/component/index",
+        "iconPath": "@iconPathComponent",
+        "selectedIconPath": "@selectedIconPathComponent",
+        "text": "控制小车"
+      },
+      {
+        "pagePath": "page/API/index",
+        "iconPath": "@iconPathAPI",
+        "selectedIconPath": "@selectedIconPathAPI",
+        "text": "小车接口"
+      },
+      {
+        "pagePath": "page/cloud/index",
+        "iconPath": "@iconPathCloud",
+        "selectedIconPath": "@selectedIconPathCloud",
+        "text": "云数据库"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "themeLocation": "demo.theme.json",
+  "style": "v2"
+}

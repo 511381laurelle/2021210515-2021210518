@@ -1,0 +1,13 @@
+<view>
+  <view class="top_tip">以小智上传的图片作为例子，由于无法使用onload函数刷新，数据延迟需要手动刷新</view>
+  <view class="box_text" wx:if="{{!testList}}">小智上传的图片将展示在这里</view>
+  <view  wx:if="{{testList}}" class="code_box">
+    <view wx:for='{{testList}}' wx:for-item="item">
+     <image src="{{item.fileID}}"></image>
+      </view>
+  </view>
+  <view class="button_clear" bindtap="clearImgSrc" >清空所有图片
+  <view class="button" bindtap="uploadImg" wx:if="{{!haveGetImgSrc}}">上传一张图片
+  </view>
+  </view>
+</view>
